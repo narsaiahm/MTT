@@ -8,7 +8,7 @@ class TriggerJob {
 		//Every 15 Minute 8AM to 6PM and Mon-Sat
 		cron name: 'cronMortalityTrigger', cronExpression: "0 0/1 08-09 ? * MON-SAT"
 	}
-
+//executing Job
 	def execute() {
 		def system = System.getProperty("os.name")
 		def serverName = System.getProperty("weblogic.Name")
