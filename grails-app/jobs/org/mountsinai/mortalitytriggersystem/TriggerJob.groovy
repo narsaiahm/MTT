@@ -3,7 +3,7 @@ package org.mountsinai.mortalitytriggersystem
 class TriggerJob {
 
 	def mortalityTriggerService;
-
+//Test Job to run the upload
 	static triggers = {
 		//Every 15 Minute 8AM to 6PM and Mon-Sat
 		cron name: 'cronMortalityTrigger', cronExpression: "0 0/1 08-09 ? * MON-SAT"
