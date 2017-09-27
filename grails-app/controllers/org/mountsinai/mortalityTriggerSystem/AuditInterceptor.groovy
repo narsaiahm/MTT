@@ -3,11 +3,12 @@ package org.mountsinai.mortalitytriggersystem
 
 class AuditInterceptor {
 
-    boolean before() { true }
+    AuditInterceptor() {
+        //match status update actions
+        match(controller: "mortality", action: ~/(acceptReviewForm|assignLeadReviewer|saveMortalityReviewForm)/)
+    }
 
-    boolean after() { true }
-
-    void afterView() {
-        // no-op
+    boolean before() {
+        auditService.auditRequest(params, session?.user?.name, actionName)
     }
 }
