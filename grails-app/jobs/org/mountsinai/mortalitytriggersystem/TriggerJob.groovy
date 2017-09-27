@@ -1,7 +1,7 @@
 package org.mountsinai.mortalitytriggersystem
 
 class TriggerJob {
-
+// added comment
 	def mortalityTriggerService;
 //Test Job to run the upload
 	static triggers = {
