@@ -5,4 +5,6 @@ class AdminController {
     def index() { }
 	def dashoard(){
 	}
+	
+	def showView
 }
